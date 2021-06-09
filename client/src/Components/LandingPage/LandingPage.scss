@@ -1,0 +1,30 @@
+@use "../../partials/variables.scss" as *;
+@use "../../partials/colors" as *;
+@use "../../partials/mixins" as *;
+@use "../../partials/typography" as *;
+
+.landing-page{
+    display: flex;
+    flex-direction: column;
+    &__title{
+        font-size: 2rem;
+        align-self: center;
+    }
+
+    &__info{
+        margin-top: 2rem;
+        border: .125rem solid black;
+        width: fit-content;
+        align-self: center;
+    }
+}
+
+.actions{
+    display:flex;
+    justify-content: space-evenly;
+
+    &__button{
+        border: .125rem solid black;
+    }
+}
+

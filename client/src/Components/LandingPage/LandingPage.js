@@ -1,4 +1,5 @@
 import React from 'react';
+import './LandingPage.scss';
 
 const LandingPage = () => {
     return (
@@ -8,7 +9,7 @@ const LandingPage = () => {
                 <div className = "actions__button">Login Button</div>
                 <div className ="actions__button"> Register Button</div>
             </section>
-            <div className = "landing-info">Learn about the app/why i made it or something like that</div>
+            <div className = "landing-page__info">About the app</div>
         </div>
     );
 };
