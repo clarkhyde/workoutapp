@@ -20,14 +20,14 @@ const EditExercisePage = () => {
                 />
                 <label 
                     className = "" 
-                    htmlFor = "bodypart"
+                    htmlFor = "body part"
                 >
                     Body Part/Muscle Group:
                 </label>
                 <input 
                     className = ""
                     type = "text" 
-                    name = "bodypart"
+                    name = "body part"
                 />
                 <label 
                     className = "" 
