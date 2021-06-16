@@ -33,19 +33,17 @@ router.post('/login', (req, res) => {
     if (usernameReq && passwordReq) {
         Users
             .where({
-                username: usernameReq,
-                password: passwordReq
-            }
-            )
+                username: usernameReq
+            })
             .fetch()
             .then(user => {
-                const match = bcrypt.compare(passwordReq, user.attributes.password)
+                bcrypt.compare(passwordReq, user.attributes.password)
                     .then(function (result) {
                         if (result) {
                             const payload = { username: usernameReq };
                             const token = jwt.sign(payload, process.env.JWT_KEY);
-                            console.log(token)
-                            res.status(200).json({ token });
+                            console.log(token);
+                            res.status(200).json({ payload, token });
                         } else {
                             res.status(403).json({ err: "Incorrect Password" })
                         }
